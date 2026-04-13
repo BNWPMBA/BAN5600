@@ -1,0 +1,313 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOD9Bky9vv9GkO5yVEuBnEN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/BNWPMBA/BAN5600/blob/main/Module-03/Part-1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Part 1"
+      ],
+      "metadata": {
+        "id": "5drqRYIs1dWV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 1\n",
+        "count = 0\n",
+        "total_sum = 0\n",
+        "product = 1\n",
+        "sum_squares = 0\n",
+        "\n",
+        "num = 150\n",
+        "while num <= 1000:\n",
+        "    if num % 2 != 0:\n",
+        "        count += 1\n",
+        "        total_sum += num\n",
+        "        product *= num\n",
+        "        sum_squares += num**2\n",
+        "    num += 1\n",
+        "\n",
+        "print(f\"a) Count of odd numbers: {count}\")\n",
+        "print(f\"b) Sum of odd numbers: {total_sum}\")\n",
+        "print(f\"c) Multiplication of odd numbers: {product}\")\n",
+        "print(f\"d) Sum of squares of odd numbers: {sum_squares}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iTLztDSRYd39",
+        "outputId": "58afc5de-f88f-4f0c-9a53-2357caa1fd1a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a) Count of odd numbers: 425\n",
+            "b) Sum of odd numbers: 244375\n",
+            "c) Multiplication of odd numbers: 1652744965661487554489068643019860635984410567545807049801907130211807925456866686695833496736059572482192594208547634236259758644132679428306688737077680410142676880359187186573096474089459982097606262446254768159953679796272140484856340645218469454592514110663746113967677357134078222491379169905402374105403554899895091925864474512884108567392294578361566891681087496074874723041540419918208068077509899729242188029891730575494645059677932878263276293414034422432648056465346246678860435638994644929214365221204790842441957910000983853604243970072520725847341675806001412156223814167134750194475582187752430178141604470528913639601354413560876032822906443241496834475597260616876007529416600161873051131551560251411887367119339336061460519329398619307117576660315805666919798359278848423096893931445837080628438601562987154852662340025618898755164073261405957304591613366754641080135197934013261908322903565043141109095214292765399312891124028930323758636739687551741671354081754941463407861537233221713304795664062169152483546828328830398555095940513939999977270477217896553209278416310945112660928522471301925500508644972796901129186153411865234375\n",
+            "d) Sum of squares of odd numbers: 166104025\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 2\n",
+        "count = 0\n",
+        "total_sum = 0\n",
+        "product = 1\n",
+        "sum_squares = 0\n",
+        "\n",
+        "for num in range(150, 1001): # 1001 to include 1000\n",
+        "    if num % 2 != 0:\n",
+        "        count += 1\n",
+        "        total_sum += num\n",
+        "        product *= num\n",
+        "        sum_squares += num**2\n",
+        "\n",
+        "print(f\"a) Count: {count}\")\n",
+        "print(f\"b) Sum: {total_sum}\")\n",
+        "print(f\"c) Product: {product}\")\n",
+        "print(f\"d) Sum of squares: {sum_squares}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LNFaKpUWZhSj",
+        "outputId": "21abd513-74f2-42ba-eabd-8563f349b5ea"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a) Count: 425\n",
+            "b) Sum: 244375\n",
+            "c) Product: 1652744965661487554489068643019860635984410567545807049801907130211807925456866686695833496736059572482192594208547634236259758644132679428306688737077680410142676880359187186573096474089459982097606262446254768159953679796272140484856340645218469454592514110663746113967677357134078222491379169905402374105403554899895091925864474512884108567392294578361566891681087496074874723041540419918208068077509899729242188029891730575494645059677932878263276293414034422432648056465346246678860435638994644929214365221204790842441957910000983853604243970072520725847341675806001412156223814167134750194475582187752430178141604470528913639601354413560876032822906443241496834475597260616876007529416600161873051131551560251411887367119339336061460519329398619307117576660315805666919798359278848423096893931445837080628438601562987154852662340025618898755164073261405957304591613366754641080135197934013261908322903565043141109095214292765399312891124028930323758636739687551741671354081754941463407861537233221713304795664062169152483546828328830398555095940513939999977270477217896553209278416310945112660928522471301925500508644972796901129186153411865234375\n",
+            "d) Sum of squares: 166104025\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 3\n",
+        "M = int(input(\"Enter value for M: \"))\n",
+        "s = 0\n",
+        "k = 1\n",
+        "\n",
+        "while k <= M:\n",
+        "    s = s + (1/k)\n",
+        "    k = k + 1\n",
+        "\n",
+        "print(f\"The sum s is: {s}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YDiH7Y1abjS5",
+        "outputId": "3ab8fb0d-570f-4541-9efa-be780f4a9306"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter value for M: 2\n",
+            "The sum s is: 1.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 4\n",
+        "total = 0\n",
+        "count = 0\n",
+        "\n",
+        "while True:\n",
+        "    val = input(\"Enter a number: \")\n",
+        "    if val.lower() == \"done\":\n",
+        "        break\n",
+        "    try:\n",
+        "        num = float(val)\n",
+        "        total += num\n",
+        "        count += 1\n",
+        "    except ValueError:\n",
+        "        print(\"bad data Invalid input\")\n",
+        "\n",
+        "if count > 0:\n",
+        "    print(f\"{total} {count} {total/count}\")\n",
+        "else:\n",
+        "    print(\"No numbers were entered.\")"
+      ],
+      "metadata": {
+        "id": "Dbr6TS0Bc8HS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b2114ad9-5c52-4091-fb79-a49aae667cec"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 1\n",
+            "Enter a number: 2\n",
+            "Enter a number: 3\n",
+            "Enter a number: 4\n",
+            "Enter a number: 5\n",
+            "Enter a number: 6\n",
+            "Enter a number: 7\n",
+            "Enter a number: 8\n",
+            "Enter a number: 9\n",
+            "Enter a number: Hello\n",
+            "bad data Invalid input\n",
+            "Enter a number: Done\n",
+            "45.0 9 5.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 5\n",
+        "nums = []\n",
+        "\n",
+        "while True:\n",
+        "    val = input(\"Enter a number: \")\n",
+        "    if val.lower() == \"done\":\n",
+        "        break\n",
+        "    try:\n",
+        "        num = float(val)\n",
+        "        nums.append(num)\n",
+        "    except ValueError:\n",
+        "        print(\"bad data Invalid input\")\n",
+        "\n",
+        "if nums:\n",
+        "    print(f\"Total: {sum(nums)}, Count: {len(nums)}, Max: {max(nums)}, Min: {min(nums)}\")\n",
+        "else:\n",
+        "    print(\"No numbers were entered.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-mT-yY6uryR0",
+        "outputId": "aaa47037-9f31-4b03-b4ae-d3c0e31d1b21"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 5\n",
+            "Enter a number: 5\n",
+            "Enter a number: 10\n",
+            "Enter a number: hello\n",
+            "bad data Invalid input\n",
+            "Enter a number: done\n",
+            "Total: 20.0, Count: 3, Max: 10.0, Min: 5.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 6\n",
+        "for z in [2, 4, 7, 9]:\n",
+        "    print(z - 1)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6qnppnrzzSNV",
+        "outputId": "af499478-22b5-4280-90aa-2d21c32433d8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "3\n",
+            "6\n",
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Question 7\n",
+        "n = 3\n",
+        "for x in [2, 5, 8]:\n",
+        "    n = n + x\n",
+        "print(n) # Added parentheses for Python 3\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dRHRwpWb0lSJ",
+        "outputId": "c812a43b-97db-4069-a699-9b6feccc95ff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "18\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
